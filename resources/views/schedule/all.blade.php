@@ -30,7 +30,7 @@
                                 $i = 0;
                             @endphp           
                             @foreach ($schedules as $schedule)
-                                        <div>
+                                        <div class="d-none">
                                            <div class="bg-dark text-light py-2 px-3 lead border " style="font-weight: bold;">
                                             {{ $schedule->medicine->name }}
                                            </div>
@@ -42,13 +42,11 @@
                                                 $tmp = $start;
                                                 for ($i = 0; $i < $schedule->count; $i++) {
                                                     $times[$i] = $tmp;
-                                               
-
                                                     $tmp += $differ;
                                                 }
 
                                            @endphp
-                                            <table class="table table-sm bg-light table-bordered">
+                                            <table class="table  table-sm bg-light table-bordered">
                                                 <tr class="">
                                                     <th>SL</th>
                                                     <th>Time</th>
